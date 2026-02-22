@@ -1,74 +1,97 @@
-SIEM Monitoring & Threat Detection Project
+🚨 Splunk SIEM Monitoring & Threat Detection Lab
 📌 Project Overview
 
-This project demonstrates the implementation of a Security Information and Event Management (SIEM) solution to monitor, detect, and analyze security events within a Linux-based server environment.
+This project demonstrates the design and implementation of a Security Information and Event Management (SIEM) solution using Splunk to monitor, correlate, and detect security events in a Linux-based server environment.
 
-The objective was to improve visibility, detect malicious activity in real time, and strengthen incident response capabilities.
+The objective was to simulate real-world SOC operations by improving visibility into system activity, detecting malicious behavior in real time, and strengthening incident response readiness.
 
-🖥 Environment
+🖥 Lab Environment
 
-Linux Server
+Linux Server (Primary Log Source)
 
-MySQL Database
+MySQL Database Server
 
-IPv4 Network Configuration
+IPv4 Network Infrastructure
 
-SSL/TLS Encrypted Communication
+SSL/TLS Encrypted Communications
 
-Centralized Log Management
+Centralized Log Ingestion into Splunk
 
-🔍 Security Events Monitored
+System and authentication logs were forwarded and indexed within Splunk for real-time analysis.
 
-Multiple failed SSH login attempts (Brute-force detection)
+🔍 Detection Use Cases Implemented
+1️⃣ SSH Brute-Force Detection
 
-Privilege escalation attempts
+Monitored repeated failed login attempts
 
-Unusual database access
+Created SPL-based alert when threshold exceeded
 
-Suspicious IP address activity
+Classified as High severity risk
 
-Large outbound data transfers (possible exfiltration)
+2️⃣ Privilege Escalation Monitoring
 
-📊 Risk Detection Method
+Tracked abnormal sudo usage
 
-Risk scoring was calculated using:
+Identified unauthorized root access attempts
 
-Risk = Likelihood × Severity
+3️⃣ Suspicious IP Correlation
 
-Alerts were categorized as:
+Detected repeated connections from unknown sources
 
-Low
+Correlated events across defined time windows
 
-Medium
+4️⃣ Data Exfiltration Indicators
 
-High
+Flagged abnormal outbound traffic volume
 
-🛠 Tools & Techniques Used
+Assigned Medium severity alert classification
 
-Log collection and normalization
+📊 Risk Detection Methodology
 
-Event correlation rules
+Risk Score = Likelihood × Impact
 
-Alert configuration
+Events were categorized as:
+
+Low Risk
+
+Medium Risk
+
+High Risk
+
+Alert thresholds were configured to reduce false positives while maintaining detection accuracy.
+
+🛠 Skills & Techniques Demonstrated
+
+Log ingestion and parsing
+
+SPL query development
+
+Event correlation logic
+
+Alert rule configuration
+
+Security event analysis
 
 Incident documentation
 
-Security log analysis
+Threat detection engineering
 
 🚨 Key Outcomes
 
-Improved real-time monitoring
-
-Faster threat detection
+Improved centralized visibility across infrastructure
 
 Reduced Mean Time to Detect (MTTD)
 
-Stronger overall security posture
+Strengthened proactive threat monitoring
 
-📈 Future Improvements
+Simulated real-world SOC analyst workflow
 
-Implement automated response actions
+📈 Future Enhancements
 
-Integrate threat intelligence feeds
+Integration of threat intelligence feeds
 
-Deploy SIEM dashboards for executive reporting
+Automated incident response playbooks
+
+Advanced dashboard development
+
+Implementation of anomaly-based detection models
